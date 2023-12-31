@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Uses Rebrickable REST API to get LEGO Sets Information.</description>
+        <internal_name>rebrickable_get_sets_info</internal_name>
+        <label_cache>[{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.year","label":"2➛result➛year","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.theme_id","label":"2➛result➛theme id","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_url","label":"2➛result➛set url","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_num","label":"2➛result➛set num","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.num_parts","label":"2➛result➛num parts","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.name","label":"2➛result➛name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.last_modified_dt","label":"2➛result➛last modified dt","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_img_url","label":"2➛result➛set img url","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8.table_name","label":"3➛LEGO Sets Results Table","reference":"x_356576_rebrickv3_lego_sets_resulkts","reference_display":"LEGO Sets Results","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8.record","label":"3➛LEGO Sets Results Record","reference":"x_356576_rebrickv3_lego_sets_resulkts","reference_display":"LEGO Sets Results","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ebcbe0dd-598d-4c7f-b819-d1b7ad66d9b1.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"ebcbe0dd-598d-4c7f-b819-d1b7ad66d9b1.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"ebcbe0dd-598d-4c7f-b819-d1b7ad66d9b1.table_name","label":"3➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ebcbe0dd-598d-4c7f-b819-d1b7ad66d9b1.record","label":"3➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.search","label":"Trigger➛LEGO Sets Info Record➛Search Term","reference":"","reference_display":"Search Term","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"search"},{"name":"Created or Updated_1.current.page_size","label":"Trigger➛LEGO Sets Info Record➛Page Size","reference":"","reference_display":"Page Size","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"page_size"},{"name":"Created or Updated_1.current.page_number","label":"Trigger➛LEGO Sets Info Record➛Page Number","reference":"","reference_display":"Page Number","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"page_number"},{"name":"Created or Updated_1.current.theme_id","label":"Trigger➛LEGO Sets Info Record➛Theme ID","reference":"","reference_display":"Theme ID","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"theme_id"},{"name":"Created or Updated_1.current.ordering","label":"Trigger➛LEGO Sets Info Record➛Order Results","reference":"","reference_display":"Order Results","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"ordering"},{"name":"Created or Updated_1.current.max_year","label":"Trigger➛LEGO Sets Info Record➛Maximum Year","reference":"","reference_display":"Maximum Year","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"max_year"},{"name":"Created or Updated_1.current.min_year","label":"Trigger➛LEGO Sets Info Record➛Minimum Year","reference":"","reference_display":"Minimum Year","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"min_year"},{"name":"Created or Updated_1.current.min_parts","label":"Trigger➛LEGO Sets Info Record➛Minimum Parts","reference":"","reference_display":"Minimum Parts","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"min_parts"},{"name":"Created or Updated_1.current.max_parts","label":"Trigger➛LEGO Sets Info Record➛Maximum Parts","reference":"","reference_display":"Maximum Parts","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"max_parts"},{"name":"c830dd46-abc3-4733-9da7-f000da6d8a7d.results","label":"1➛results","reference_display":"results","type":"array.object","base_type":"array.object","attributes":{"sourceId":"33e431eb-22ce-458b-af8d-273f8a066347","child_name":"result","uiUniqueId":"136589a1-36eb-4c83-a7a6-9108dd361b26","uiTypeLabel":"Array.Object","co_type_name":"FD3e37995aa85bc9105ef122fa66c01c31","child_label":"result","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"6de4eb48-9d53-4f03-a135-639aacb5efc1","uiType":"array.object","child_type":"object","child_uiUniqueId":"e42d030f-a191-499a-91b4-0a40e02f5081"}},{"name":"c830dd46-abc3-4733-9da7-f000da6d8a7d.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"d4cd25be-b8ff-436f-beec-de38cfafc6d8"}},{"name":"c830dd46-abc3-4733-9da7-f000da6d8a7d.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD3e37995a545bc9103d2309ea32b9f02f","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"c52bb565-3342-474f-a584-71beb8da025a"}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item","label":"2➛result","reference_display":"result","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"28197ace-d240-414c-aa4a-e26023b4829f.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"28197ace-d240-414c-aa4a-e26023b4829f.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}}]</label_cache>
+        <master_snapshot>5ad7a90e87f091109f45b8c6cebb3521</master_snapshot>
+        <name>Rebrickable Get Sets Info</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>8fd7e90e87f091109f45b8c6cebb3551</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:48:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>18fe5d12879bc9109f45b8c6cebb359e</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Rebrickable Get Sets Info</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name>sys_hub_flow_18fe5d12879bc9109f45b8c6cebb359e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:57</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_356576_rebrickv3_lego_sets_info">min_yearISNOTEMPTY^max_yearISNOTEMPTY<item endquery="false" field="min_year" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="max_year" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8fd7e90e87f091109f45b8c6cebb3551</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:56</sys_updated_on>
+        <table>x_356576_rebrickv3_lego_sets_info</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"cbd7e90e87f091109f45b8c6cebb3552","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>18fe5d12879bc9109f45b8c6cebb359e</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:57</sys_created_on>
+        <sys_id>cbd7e90e87f091109f45b8c6cebb3552</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:57</sys_updated_on>
+        <trigger display_value="">8fd7e90e87f091109f45b8c6cebb3551</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>cbd7e90e87f091109f45b8c6cebb3552</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:57</sys_created_on>
+        <sys_id>0bd7e90e87f091109f45b8c6cebb3553</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=18fe5d12879bc9109f45b8c6cebb359e^sys_idNOT INcbd7e90e87f091109f45b8c6cebb3552"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=18fe5d12879bc9109f45b8c6cebb359e^sys_idNOT INe1906d92879bc9109f45b8c6cebb3580"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Rebrickable Get Sets Info">18fe5d12879bc9109f45b8c6cebb359e</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>e1906d92879bc9109f45b8c6cebb3580</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:57</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e1906d92879bc9109f45b8c6cebb3580"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>e1906d92879bc9109f45b8c6cebb3580</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>25906d92879bc9109f45b8c6cebb3581</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="Run Trigger">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>e1906d92879bc9109f45b8c6cebb3580</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>2d906d92879bc9109f45b8c6cebb3581</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <value>min_yearISNOTEMPTY^max_yearISNOTEMPTY</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>e1906d92879bc9109f45b8c6cebb3580</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>ed906d92879bc9109f45b8c6cebb3581</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <value>x_356576_rebrickv3_lego_sets_info</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=e1906d92879bc9109f45b8c6cebb3580"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=18fe5d12879bc9109f45b8c6cebb359e^sys_idNOT IN5cfe5d12879bc9109f45b8c6cebb35a0"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>18fe5d12879bc9109f45b8c6cebb359e</id>
+        <name>Rebrickable Get Sets Info</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:48:16</sys_created_on>
+        <sys_id>5cfe5d12879bc9109f45b8c6cebb35a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:48:16</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=5cfe5d12879bc9109f45b8c6cebb35a0"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=18fe5d12879bc9109f45b8c6cebb359e^sys_idNOT IN61906d92879bc9109f45b8c6cebb3572,a5906d92879bc9109f45b8c6cebb3578,e1906d92879bc9109f45b8c6cebb356b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD8bd7e90e2cf09110d4d157bb16dc2d58,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Rebrickable Get Sets Info">18fe5d12879bc9109f45b8c6cebb359e</model>
+        <model_id>18fe5d12879bc9109f45b8c6cebb359e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_18fe5d12879bc9109f45b8c6cebb359e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:26</sys_created_on>
+        <sys_id>61906d92879bc9109f45b8c6cebb3572</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=61906d92879bc9109f45b8c6cebb3572"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Rebrickable Get Sets Info">18fe5d12879bc9109f45b8c6cebb359e</model>
+        <model_id>18fe5d12879bc9109f45b8c6cebb359e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_18fe5d12879bc9109f45b8c6cebb359e</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>a5906d92879bc9109f45b8c6cebb3578</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a5906d92879bc9109f45b8c6cebb3578"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Rebrickable Get Sets Info">18fe5d12879bc9109f45b8c6cebb359e</model>
+        <model_id>18fe5d12879bc9109f45b8c6cebb359e</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_18fe5d12879bc9109f45b8c6cebb359e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:26</sys_created_on>
+        <sys_id>e1906d92879bc9109f45b8c6cebb356b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e1906d92879bc9109f45b8c6cebb356b"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=18fe5d12879bc9109f45b8c6cebb359e^sys_idNOT IN25906d92879bc9109f45b8c6cebb3591,6dab695e879bc9109f45b8c6cebb3552"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get LEGO Sets Info">a237595a875bc9109f45b8c6cebb359f</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Rebrickable Get Sets Info">18fe5d12879bc9109f45b8c6cebb359e</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>25906d92879bc9109f45b8c6cebb3591</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-25 14:58:43</sys_updated_on>
+        <ui_id>c830dd46-abc3-4733-9da7-f000da6d8a7d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=25906d92879bc9109f45b8c6cebb3591"/>
+    <sys_element_mapping action="delete_multiple" query="id=25906d92879bc9109f45b8c6cebb3591"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_parts</field>
+        <id>25906d92879bc9109f45b8c6cebb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>a1906d92879bc9109f45b8c6cebb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.max_parts}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_year</field>
+        <id>25906d92879bc9109f45b8c6cebb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>e9906d92879bc9109f45b8c6cebb3595</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.max_year}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>min_parts</field>
+        <id>25906d92879bc9109f45b8c6cebb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>2d906d92879bc9109f45b8c6cebb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.min_parts}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>min_year</field>
+        <id>25906d92879bc9109f45b8c6cebb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>29906d92879bc9109f45b8c6cebb3595</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.min_year}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ordering</field>
+        <id>25906d92879bc9109f45b8c6cebb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>ed906d92879bc9109f45b8c6cebb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.ordering}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>page</field>
+        <id>25906d92879bc9109f45b8c6cebb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>65906d92879bc9109f45b8c6cebb3595</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.page_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>page_size</field>
+        <id>25906d92879bc9109f45b8c6cebb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>ad906d92879bc9109f45b8c6cebb3595</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.page_size}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>search</field>
+        <id>25906d92879bc9109f45b8c6cebb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>69906d92879bc9109f45b8c6cebb3594</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.search}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>theme_id</field>
+        <id>25906d92879bc9109f45b8c6cebb3591</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>a1906d92879bc9109f45b8c6cebb3595</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.theme_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=25906d92879bc9109f45b8c6cebb3591"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=25906d92879bc9109f45b8c6cebb3591"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Rebrickable Get Sets Info">18fe5d12879bc9109f45b8c6cebb359e</flow>
+        <order>3</order>
+        <parent_ui_id>b38d0e77-a929-4952-9f50-e3b70aea1543</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 16:43:46</sys_created_on>
+        <sys_id>6dab695e879bc9109f45b8c6cebb3552</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-25 14:58:43</sys_updated_on>
+        <ui_id>b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6dab695e879bc9109f45b8c6cebb3552"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6dab695e879bc9109f45b8c6cebb3552</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 16:43:47</sys_created_on>
+        <sys_id>a1ab695e879bc9109f45b8c6cebb3555</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 16:43:47</sys_updated_on>
+        <value>x_356576_rebrickv3_lego_sets_resulkts</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6dab695e879bc9109f45b8c6cebb3552"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>6dab695e879bc9109f45b8c6cebb3552</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 16:43:47</sys_created_on>
+        <sys_id>69ab695e879bc9109f45b8c6cebb3554</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 16:43:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>6dab695e879bc9109f45b8c6cebb3552</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 16:43:47</sys_created_on>
+        <sys_id>21ab695e879bc9109f45b8c6cebb3555</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 16:43:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>img_url={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_img_url}}^last_modified={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.last_modified_dt}}^name={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.name}}^num_parts={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.num_parts}}^set_number={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_num}}^set_url={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_url}}^theme_id={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.theme_id}}^year={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.year}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6dab695e879bc9109f45b8c6cebb3552"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6dab695e879bc9109f45b8c6cebb3552"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=18fe5d12879bc9109f45b8c6cebb359e^sys_idNOT IN5916651a879bc9109f45b8c6cebb352d"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9d16651a879bc9109f45b8c6cebb352c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Rebrickable Get Sets Info">18fe5d12879bc9109f45b8c6cebb359e</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 16:19:28</sys_created_on>
+        <sys_id>5916651a879bc9109f45b8c6cebb352d</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:57</sys_updated_on>
+        <ui_id>b38d0e77-a929-4952-9f50-e3b70aea1543</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=5916651a879bc9109f45b8c6cebb352d"/>
+    <sys_element_mapping action="delete_multiple" query="id=5916651a879bc9109f45b8c6cebb352d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>5916651a879bc9109f45b8c6cebb352d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 16:19:28</sys_created_on>
+        <sys_id>9516651a879bc9109f45b8c6cebb3531</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 16:19:28</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{c830dd46-abc3-4733-9da7-f000da6d8a7d.results}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=5916651a879bc9109f45b8c6cebb352d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5916651a879bc9109f45b8c6cebb352d"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_18fe5d12879bc9109f45b8c6cebb359e^sys_idNOT INa9906d92879bc9109f45b8c6cebb3570,ed906d92879bc9109f45b8c6cebb3576,ed906d92879bc9109f45b8c6cebb357c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_18fe5d12879bc9109f45b8c6cebb359e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:26</sys_created_on>
+        <sys_id>a9906d92879bc9109f45b8c6cebb3570</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:26</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_18fe5d12879bc9109f45b8c6cebb359e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:26</sys_created_on>
+        <sys_id>ed906d92879bc9109f45b8c6cebb3576</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:26</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_18fe5d12879bc9109f45b8c6cebb359e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-08 15:55:27</sys_created_on>
+        <sys_id>ed906d92879bc9109f45b8c6cebb357c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-08 15:55:27</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_18fe5d12879bc9109f45b8c6cebb359e"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Uses Rebrickable REST API to get LEGO Sets Information.</description>
+        <internal_name>rebrickable_get_sets_info</internal_name>
+        <label_cache>[{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.year","label":"2➛result➛year","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.theme_id","label":"2➛result➛theme id","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_url","label":"2➛result➛set url","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_num","label":"2➛result➛set num","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.num_parts","label":"2➛result➛num parts","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.name","label":"2➛result➛name","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.last_modified_dt","label":"2➛result➛last modified dt","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_img_url","label":"2➛result➛set img url","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8.table_name","label":"3➛LEGO Sets Results Table","reference":"x_356576_rebrickv3_lego_sets_resulkts","reference_display":"LEGO Sets Results","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8.record","label":"3➛LEGO Sets Results Record","reference":"x_356576_rebrickv3_lego_sets_resulkts","reference_display":"LEGO Sets Results","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ebcbe0dd-598d-4c7f-b819-d1b7ad66d9b1.__dont_treat_as_error__","label":"3➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"ebcbe0dd-598d-4c7f-b819-d1b7ad66d9b1.__action_status__","label":"3➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"ebcbe0dd-598d-4c7f-b819-d1b7ad66d9b1.table_name","label":"3➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ebcbe0dd-598d-4c7f-b819-d1b7ad66d9b1.record","label":"3➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.search","label":"Trigger➛LEGO Sets Info Record➛Search Term","reference":"","reference_display":"Search Term","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"search"},{"name":"Created or Updated_1.current.page_size","label":"Trigger➛LEGO Sets Info Record➛Page Size","reference":"","reference_display":"Page Size","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"page_size"},{"name":"Created or Updated_1.current.page_number","label":"Trigger➛LEGO Sets Info Record➛Page Number","reference":"","reference_display":"Page Number","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"page_number"},{"name":"Created or Updated_1.current.theme_id","label":"Trigger➛LEGO Sets Info Record➛Theme ID","reference":"","reference_display":"Theme ID","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"theme_id"},{"name":"Created or Updated_1.current.ordering","label":"Trigger➛LEGO Sets Info Record➛Order Results","reference":"","reference_display":"Order Results","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"ordering"},{"name":"Created or Updated_1.current.max_year","label":"Trigger➛LEGO Sets Info Record➛Maximum Year","reference":"","reference_display":"Maximum Year","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"max_year"},{"name":"Created or Updated_1.current.min_year","label":"Trigger➛LEGO Sets Info Record➛Minimum Year","reference":"","reference_display":"Minimum Year","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"min_year"},{"name":"Created or Updated_1.current.min_parts","label":"Trigger➛LEGO Sets Info Record➛Minimum Parts","reference":"","reference_display":"Minimum Parts","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"min_parts"},{"name":"Created or Updated_1.current.max_parts","label":"Trigger➛LEGO Sets Info Record➛Maximum Parts","reference":"","reference_display":"Maximum Parts","type":"string","base_type":"string","parent_table_name":"x_356576_rebrickv3_lego_sets_info","column_name":"max_parts"},{"name":"c830dd46-abc3-4733-9da7-f000da6d8a7d.results","label":"1➛results","reference_display":"results","type":"array.object","base_type":"array.object","attributes":{"sourceId":"33e431eb-22ce-458b-af8d-273f8a066347","child_name":"result","uiUniqueId":"136589a1-36eb-4c83-a7a6-9108dd361b26","uiTypeLabel":"Array.Object","co_type_name":"FD3e37995aa85bc9105ef122fa66c01c31","child_label":"result","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"6de4eb48-9d53-4f03-a135-639aacb5efc1","uiType":"array.object","child_type":"object","child_uiUniqueId":"e42d030f-a191-499a-91b4-0a40e02f5081"}},{"name":"c830dd46-abc3-4733-9da7-f000da6d8a7d.__dont_treat_as_error__","label":"1➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"d4cd25be-b8ff-436f-beec-de38cfafc6d8"}},{"name":"c830dd46-abc3-4733-9da7-f000da6d8a7d.__action_status__","label":"1➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD3e37995a545bc9103d2309ea32b9f02f","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"c52bb565-3342-474f-a584-71beb8da025a"}},{"name":"b38d0e77-a929-4952-9f50-e3b70aea1543.item","label":"2➛result","reference_display":"result","type":"object","base_type":"object","attributes":{"pills_draggable_inside_block":"true","pills_draggable_outside_block":"false"}},{"name":"28197ace-d240-414c-aa4a-e26023b4829f.__action_status__","label":"4➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"28197ace-d240-414c-aa4a-e26023b4829f.__dont_treat_as_error__","label":"4➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}}]</label_cache>
+        <master>true</master>
+        <name>Rebrickable Get Sets Info</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Rebrickable Get Sets Info">18fe5d12879bc9109f45b8c6cebb359e</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5ad7a90e87f091109f45b8c6cebb3521</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=5ad7a90e87f091109f45b8c6cebb3521^sys_idNOT INaad7a90e87f091109f45b8c6cebb3575"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Rebrickable Get Sets Info">5ad7a90e87f091109f45b8c6cebb3521</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_class_name>sys_hub_trigger_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:55</sys_created_on>
+        <sys_id>aad7a90e87f091109f45b8c6cebb3575</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:57</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=aad7a90e87f091109f45b8c6cebb3575"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>aad7a90e87f091109f45b8c6cebb3575</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:55</sys_created_on>
+        <sys_id>6ad7a90e87f091109f45b8c6cebb3577</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:55</sys_updated_on>
+        <value>x_356576_rebrickv3_lego_sets_info</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>aad7a90e87f091109f45b8c6cebb3575</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:55</sys_created_on>
+        <sys_id>a6d7a90e87f091109f45b8c6cebb3577</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:55</sys_updated_on>
+        <value>min_yearISNOTEMPTY^max_yearISNOTEMPTY</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>aad7a90e87f091109f45b8c6cebb3575</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:55</sys_created_on>
+        <sys_id>e2d7a90e87f091109f45b8c6cebb3577</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:55</sys_updated_on>
+        <value>unique_changes</value>
+        <variable display_value="Run Trigger">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=aad7a90e87f091109f45b8c6cebb3575"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=5ad7a90e87f091109f45b8c6cebb3521^sys_idNOT INdad7a90e87f091109f45b8c6cebb3522"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>5ad7a90e87f091109f45b8c6cebb3521</id>
+        <name>Rebrickable Get Sets Info</name>
+        <sys_class_name>sys_flow_cat_variable_model</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>dad7a90e87f091109f45b8c6cebb3522</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=dad7a90e87f091109f45b8c6cebb3522"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=5ad7a90e87f091109f45b8c6cebb3521^sys_idNOT IN2ed7a90e87f091109f45b8c6cebb353a,ded7a90e87f091109f45b8c6cebb3525,e6d7a90e87f091109f45b8c6cebb3545"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD1ed7a90e81f09110fdda0b01e51c7123,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Rebrickable Get Sets Info">5ad7a90e87f091109f45b8c6cebb3521</model>
+        <model_id>5ad7a90e87f091109f45b8c6cebb3521</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5ad7a90e87f091109f45b8c6cebb3521</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>2ed7a90e87f091109f45b8c6cebb353a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2ed7a90e87f091109f45b8c6cebb353a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Rebrickable Get Sets Info">5ad7a90e87f091109f45b8c6cebb3521</model>
+        <model_id>5ad7a90e87f091109f45b8c6cebb3521</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5ad7a90e87f091109f45b8c6cebb3521</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>ded7a90e87f091109f45b8c6cebb3525</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ded7a90e87f091109f45b8c6cebb3525"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Rebrickable Get Sets Info">5ad7a90e87f091109f45b8c6cebb3521</model>
+        <model_id>5ad7a90e87f091109f45b8c6cebb3521</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_5ad7a90e87f091109f45b8c6cebb3521</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>e6d7a90e87f091109f45b8c6cebb3545</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e6d7a90e87f091109f45b8c6cebb3545"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=5ad7a90e87f091109f45b8c6cebb3521^sys_idNOT IN2ed7a90e87f091109f45b8c6cebb356a,2ed7a90e87f091109f45b8c6cebb3573"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get LEGO Sets Info">a237595a875bc9109f45b8c6cebb359f</action_type>
+        <action_type_parent display_value="Get LEGO Sets Info">133a5419875fc5109f45b8c6cebb35a1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Rebrickable Get Sets Info">5ad7a90e87f091109f45b8c6cebb3521</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>2ed7a90e87f091109f45b8c6cebb356a</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <ui_id>c830dd46-abc3-4733-9da7-f000da6d8a7d</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2ed7a90e87f091109f45b8c6cebb356a"/>
+    <sys_element_mapping action="delete_multiple" query="id=2ed7a90e87f091109f45b8c6cebb356a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_parts</field>
+        <id>2ed7a90e87f091109f45b8c6cebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>6ed7a90e87f091109f45b8c6cebb356c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.max_parts}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>max_year</field>
+        <id>2ed7a90e87f091109f45b8c6cebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>a2d7a90e87f091109f45b8c6cebb356e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.max_year}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>min_parts</field>
+        <id>2ed7a90e87f091109f45b8c6cebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>e2d7a90e87f091109f45b8c6cebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.min_parts}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>min_year</field>
+        <id>2ed7a90e87f091109f45b8c6cebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>eed7a90e87f091109f45b8c6cebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.min_year}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ordering</field>
+        <id>2ed7a90e87f091109f45b8c6cebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>a6d7a90e87f091109f45b8c6cebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.ordering}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>page</field>
+        <id>2ed7a90e87f091109f45b8c6cebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>2ed7a90e87f091109f45b8c6cebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.page_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>page_size</field>
+        <id>2ed7a90e87f091109f45b8c6cebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>66d7a90e87f091109f45b8c6cebb356e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.page_size}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>search</field>
+        <id>2ed7a90e87f091109f45b8c6cebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>22d7a90e87f091109f45b8c6cebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.search}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>theme_id</field>
+        <id>2ed7a90e87f091109f45b8c6cebb356a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>6ad7a90e87f091109f45b8c6cebb356d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_a237595a875bc9109f45b8c6cebb359f</table>
+        <value>{{Created or Updated_1.current.theme_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2ed7a90e87f091109f45b8c6cebb356a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2ed7a90e87f091109f45b8c6cebb356a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Rebrickable Get Sets Info">5ad7a90e87f091109f45b8c6cebb3521</flow>
+        <order>3</order>
+        <parent_ui_id>b38d0e77-a929-4952-9f50-e3b70aea1543</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:55</sys_created_on>
+        <sys_id>2ed7a90e87f091109f45b8c6cebb3573</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:55</sys_updated_on>
+        <ui_id>b1b9c8e5-6c5d-492e-8d64-ff8d1923e0c8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2ed7a90e87f091109f45b8c6cebb3573"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>2ed7a90e87f091109f45b8c6cebb3573</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:55</sys_created_on>
+        <sys_id>26d7a90e87f091109f45b8c6cebb3575</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:55</sys_updated_on>
+        <value>x_356576_rebrickv3_lego_sets_resulkts</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2ed7a90e87f091109f45b8c6cebb3573"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>2ed7a90e87f091109f45b8c6cebb3573</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:55</sys_created_on>
+        <sys_id>eed7a90e87f091109f45b8c6cebb3574</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:55</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>2ed7a90e87f091109f45b8c6cebb3573</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:55</sys_created_on>
+        <sys_id>a2d7a90e87f091109f45b8c6cebb3575</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:55</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>img_url={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_img_url}}^last_modified={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.last_modified_dt}}^name={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.name}}^num_parts={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.num_parts}}^set_number={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_num}}^set_url={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.set_url}}^theme_id={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.theme_id}}^year={{b38d0e77-a929-4952-9f50-e3b70aea1543.item.year}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2ed7a90e87f091109f45b8c6cebb3573"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2ed7a90e87f091109f45b8c6cebb3573"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=5ad7a90e87f091109f45b8c6cebb3521^sys_idNOT INe2d7a90e87f091109f45b8c6cebb3553"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9d16651a879bc9109f45b8c6cebb352c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="Rebrickable Get Sets Info">5ad7a90e87f091109f45b8c6cebb3521</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>e2d7a90e87f091109f45b8c6cebb3553</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <ui_id>b38d0e77-a929-4952-9f50-e3b70aea1543</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e2d7a90e87f091109f45b8c6cebb3553"/>
+    <sys_element_mapping action="delete_multiple" query="id=e2d7a90e87f091109f45b8c6cebb3553"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>items</field>
+        <id>e2d7a90e87f091109f45b8c6cebb3553</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>2ad7a90e87f091109f45b8c6cebb3556</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_098e1dc5c3e232002841b63b12d3ae33</table>
+        <value>{{c830dd46-abc3-4733-9da7-f000da6d8a7d.results}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e2d7a90e87f091109f45b8c6cebb3553"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e2d7a90e87f091109f45b8c6cebb3553"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_5ad7a90e87f091109f45b8c6cebb3521^sys_idNOT IN2ed7a90e87f091109f45b8c6cebb3536,aed7a90e87f091109f45b8c6cebb354b,e6d7a90e87f091109f45b8c6cebb3541"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5ad7a90e87f091109f45b8c6cebb3521</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>2ed7a90e87f091109f45b8c6cebb3536</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5ad7a90e87f091109f45b8c6cebb3521</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>aed7a90e87f091109f45b8c6cebb354b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5ad7a90e87f091109f45b8c6cebb3521</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:54</sys_created_on>
+        <sys_id>e6d7a90e87f091109f45b8c6cebb3541</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5ad7a90e87f091109f45b8c6cebb3521"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>18fe5d12879bc9109f45b8c6cebb359e</sys_id>
+        <latest_snapshot>5ad7a90e87f091109f45b8c6cebb3521</latest_snapshot>
+        <compiler_build>glide-tokyo-07-08-2022__patch1-09-01-2022_09-16-2022_1610.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=18fe5d12879bc9109f45b8c6cebb359e^sys_idNOT IN83d7e90e87f091109f45b8c6cebb3554"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"83d7e90e87f091109f45b8c6cebb3554","name":"plan","plan_signature":null}}</plan>
+        <plan_id>18fe5d12879bc9109f45b8c6cebb359e</plan_id>
+        <snapshot>deda7e2887c869109f45b8c6cebb35f1</snapshot>
+        <sys_class_name>sys_flow_trigger_plan</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-07-21 11:22:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>83d7e90e87f091109f45b8c6cebb3554</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-07-21 11:22:57</sys_updated_on>
+        <trigger display_value="">8fd7e90e87f091109f45b8c6cebb3551</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=18fe5d12879bc9109f45b8c6cebb359e"/>
+</record_update>

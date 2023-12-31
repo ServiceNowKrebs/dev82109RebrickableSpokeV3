@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="df6b195e875bc9109f45b8c6cebb354f" label="LEGO Sets Info" max_length="40" name="x_356576_rebrickv3_lego_sets_info" type="collection">
+        <element label="Maximum Parts" max_length="20" name="max_parts" type="string"/>
+        <element label="Maximum Year" mandatory="true" max_length="10" name="max_year" type="string"/>
+        <element label="Minimum Parts" max_length="20" name="min_parts" type="string"/>
+        <element label="Minimum Year" mandatory="true" max_length="10" name="min_year" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Order Results" max_length="200" name="ordering" type="string"/>
+        <element label="Page Number" max_length="10" name="page_number" type="string"/>
+        <element label="Page Size" max_length="10" name="page_size" type="string"/>
+        <element label="Search Term" max_length="400" name="search" type="string"/>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <element label="Theme ID" max_length="10" name="theme_id" type="string"/>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

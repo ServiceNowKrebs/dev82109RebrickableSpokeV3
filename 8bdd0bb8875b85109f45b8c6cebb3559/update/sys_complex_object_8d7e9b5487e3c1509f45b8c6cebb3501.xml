@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDc97e9b54c5e3c150dcddda201eba2401</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>8bdd0bb8875b85109f45b8c6cebb3559</scope_name>
+        <serialized_content>{"FlowDesigner:FDc97e9b54c5e3c150dcddda201eba2401":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDc97e9b54c5e3c150dcddda201eba2401.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"7c6524b9-cda8-4bcf-a76c-18511c0eff42\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDc97e9b54c5e3c150dcddda201eba2401\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-15 06:13:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8d7e9b5487e3c1509f45b8c6cebb3501</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDc97e9b54c5e3c150dcddda201eba2401</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name>sys_complex_object_8d7e9b5487e3c1509f45b8c6cebb3501</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-15 06:13:13</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

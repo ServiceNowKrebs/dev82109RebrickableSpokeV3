@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="live_feed=false" db_object_id="5104ad56879bc9109f45b8c6cebb3599" label="LEGO Sets Results" max_length="40" name="x_356576_rebrickv3_lego_sets_resulkts" type="collection">
+        <element label="Image URL" max_length="400" name="img_url" type="string"/>
+        <element label="Last Modified" max_length="200" name="last_modified" type="string"/>
+        <element label="Name" max_length="200" name="name" type="string"/>
+        <element label="Number of Parts" max_length="20" name="num_parts" type="string"/>
+        <element label="Set Number" max_length="10" name="set_number" type="string"/>
+        <element label="Set URL" max_length="200" name="set_url" type="string"/>
+        <element label="Theme ID" max_length="10" name="theme_id" type="string"/>
+        <element label="Year" max_length="10" name="year" type="string"/>
+    </element>
+</database>

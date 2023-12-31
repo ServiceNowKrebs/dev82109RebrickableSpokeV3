@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_356576_rebrickv3.remote_lego_set_results_user" name="x_356576_rebrickv3.remote_lego_set_results_user">52e18ae387d301509f45b8c6cebb3547</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-12 15:33:27</sys_created_on>
+        <sys_id>9ae18ae387d301509f45b8c6cebb354a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>52e18ae387d301509f45b8c6cebb3547</sys_name>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name>sys_embedded_help_role_9ae18ae387d301509f45b8c6cebb354a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-12 15:33:27</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

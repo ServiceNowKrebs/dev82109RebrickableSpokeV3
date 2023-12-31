@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="live_feed=false,read_only=true" db_object_id="ad414ae387d301509f45b8c6cebb35d3" label="Remote LEGO Set Results" max_length="40" name="x_356576_rebrickv3_st_remote_lego_set_results" type="collection">
+        <element label="Image URL" max_length="400" name="img_url" type="url"/>
+        <element label="Last Modified" max_length="200" name="last_modified" type="string"/>
+        <element label="Max Year" max_length="10" name="max_year" type="string"/>
+        <element label="Min Year" max_length="10" name="min_year" type="string"/>
+        <element label="Name" max_length="200" name="name" type="string"/>
+        <element label="Number Parts" max_length="10" name="num_parts" type="string"/>
+        <element label="Number" max_length="20" name="set_num" type="string"/>
+        <element label="Set URL" max_length="400" name="set_url" type="url"/>
+        <element label="Theme ID" max_length="10" name="theme_id" type="string"/>
+        <element label="Year" max_length="10" name="year" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="num_parts" label="Number of Parts" language="en" table="x_356576_rebrickv3_lego_sets_resulkts">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>num_parts</element>
+            <help/>
+            <hint/>
+            <label>Number of Parts</label>
+            <language>en</language>
+            <name>x_356576_rebrickv3_lego_sets_resulkts</name>
+            <plural>Number of Parts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-08 16:16:09</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Number of Parts</sys_name>
+            <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+            <sys_update_name>sys_documentation_x_356576_rebrickv3_lego_sets_resulkts_num_parts_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-08 16:16:09</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

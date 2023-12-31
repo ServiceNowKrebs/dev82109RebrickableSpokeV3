@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_vtable">
+    <sys_script_vtable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <cache_isolation_level>USER</cache_isolation_level>
+        <cache_strategy>CACHE_BY_QUERY</cache_strategy>
+        <cache_ttl>0</cache_ttl>
+        <name>DefinitionRelatedLEGO-Set Results</name>
+        <script><![CDATA[(function executeQuery(v_table, v_query) {
+	//retrieveLegoSetResultsRESTMessage(v_table, v_query);  //gs.addInfoMessage(v_query.getEncodedQuery() + ' am Anfang!');
+	try { 
+		var inputs = {};
+		var action = null;
+		if(v_query.isGet()) {    
+			action = 'x_356576_rebrickv3.get_legoset_info_details';
+			inputs['lego_set_record_id'] = v_query.getSysId();	//if(inputs['lego_set_record_id'].charAt(inputs['lego_set_record_id'].length-2) != "-")
+		}
+		else if(!v_query.isGet() && v_query.getParameter("theme_id")) {   
+			if(v_query.getParameter("theme_id") == "undefined") {
+				gs.addInfoMessage("Lego Set Results cannot be retrieved because this Lego Sets Info does not have associated Theme ID. Please contact System Administrator!");
+				return;
+			}
+			else{
+				action = 'x_356576_rebrickv3.get_lego_sets_info';
+				inputs['page'] = '';
+				inputs['page_size'] = '';
+				inputs['theme_id'] = v_query.getParameter("theme_id"); 
+				inputs['min_year'] = v_query.getParameter("min_year");
+				inputs['max_year'] = v_query.getParameter("max_year");
+				inputs['min_parts'] = ''; 
+				inputs['max_parts'] = ''; 
+				inputs['ordering'] = ''; 
+				inputs['search'] = ''; 
+			}
+		}
+		else {
+			action = 'x_356576_rebrickv3.get_legoset_info_details';
+			inputs['lego_set_record_id'] = v_query.getParameter("name");	
+		}
+		// Execute Synchronously: Run in foreground. Code snippet has access to outputs. //gs.addInfoMessage('Ausführung der Flow-Action steht bevor!! ' + action);		
+		if(action === null) {
+			action='x_356576_rebrickv3.get_legoset_info_details';
+		}
+		var result = sn_fd.FlowAPI.getRunner().action(action).inForeground().withInputs(inputs).run(); 
+		var outputs = result.getOutputs();       
+		var resultArr = null;
+		if(typeof outputs['results'] == 'object'){
+			resultArr = outputs['results'];       // Array.Object 
+		}
+		else {
+			resultArr = [{'set_num': outputs['set_num'],'name':outputs['name'],'theme_id':outputs['theme_id'],'num_parts':outputs['num_parts'],'set_img_url':outputs['set_img_url'],
+						  'set_url':outputs['set_url'],'last_modified_dt':outputs['last_modified_dt'],'year': outputs['year']}];
+			inputs['min_year'] = '';
+			inputs['max_year'] = '';
+		}
+		for (var i=0; i< resultArr.length; i++)
+		{
+			var row = {};                             
+			row.last_modified = resultArr[i].last_modified_dt;
+			row.name = resultArr[i].name;   
+			row.num_parts = resultArr[i].num_parts;
+			row.set_num = resultArr[i].set_num;
+			row.sys_id = resultArr[i].set_num;
+			row.set_url = resultArr[i].set_url;
+			row.theme_id = resultArr[i].theme_id;
+			row.year = resultArr[i].year;
+			row.img_url = resultArr[i].set_img_url;
+			row.min_year = inputs['min_year'];
+			row.max_year = inputs['max_year'];
+			v_table.addRow(row);
+		}
+	} 
+	catch (ex) {
+		var message = ex.getMessage();
+		gs.error(message);   gs.addInfoMessage(message + 'Im catch-Block');  //gs.addErrorMessage('Im Catch-Block gelandet!!!');
+	}
+})(v_table, v_query);	
+
+
+
+function retrieveLegoSetResultsRESTMessage(v_table, v_query){
+	var inputs = {};
+	inputs['min_year'] = '1977';
+	inputs['max_year'] = '1980';
+	//var min_year = v_query.getParameter("min_year");
+	//var max_year = v_query.getParameter("max_year");
+	var theme_id = v_query.getParameter("theme_id");
+	var response = null;
+	var resultArr = null;
+	var responseObj = null;
+	var httpStatus = null;
+	var responseBody = null;
+	try {
+		if(!v_query.isGet() && v_query.getParameter("theme_id")) {
+			if (v_query.getParameter("theme_id") == "undefined") {
+				gs.addInfoMessage("Lego Set Results cannot be retrieved because this Lego Sets Info does not have associated Theme ID. Please contact System Administrator!");
+				return;
+			}
+			else {
+				//action = "get_lego_set_info";
+				inputs['theme_id'] = theme_id;
+				//gs.addInfoMessage(action);
+				//var outputs = sn_fd.FlowAPI.executeAction('x_356576_rebrickv3.get_lego_set_info', inputs);
+				//var outputs = sn_fd.FlowAPI.executeAction("x_356576_rebrickv3.get_lego_set_info", inputs);
+				//gs.addInfoMessage("durchgelaufen");
+				var r = new sn_ws.RESTMessageV2();      //'x_356576_rebrick2.RebrickableInfo', 'GetLegoSets');
+				r.setEndpoint('https://rebrickable.com/api/v3/lego/sets/');
+				r.setHttpMethod('get');
+				r.setQueryParameter('key','0c5e152cea36959b6fa6174e40db391d');
+				r.setQueryParameter('theme_id',inputs['theme_id']); //theme_id);
+				r.setQueryParameter('min_year', inputs['min_year']);
+				r.setQueryParameter('max_year', inputs['max_year']); //max_year);
+				response = r.execute();
+				responseBody = response.getBody();     //gs.addInfoMessage(responseBody);
+				httpStatus = response.getStatusCode(); //gs.addInfoMessage(httpStatus);
+				if (response.haveError()) {
+					gs.addErrorMessage("Error in Response data. Please contact System Administrator!");
+					gs.addInfoMessage(response.getErrorMessage());
+					v_query.setLastErrorMessage(response.getErrorMessage());
+					return;
+				}
+			}
+		}
+	}
+	catch(ex) {
+		gs.addErrorMessage("Error retrieving Lego Set Results. Please contact System Administrator!");
+		v_query.setLastErrorMessage(ex.message); 
+		gs.debug(ex.message);
+		return;
+	}
+	responseObj = JSON.parse(responseBody); //gs.addInfoMessage(responseObj);
+	resultArr = responseObj.results; // all the records are contained in an array 'results' //gs.addInfoMessage(resultArr); //gs.addInfoMessage(resultArr[1]);
+	for (var i=0; i< resultArr.length; i++)
+	{
+		var row = {};
+		var id = 77123 + i;
+		row.last_modified = resultArr[i].last_modified_dt;
+		row.name = resultArr[i].name; //gs.addInfoMessage(row.name);
+		row.num_parts = resultArr[i].num_parts;
+		row.set_num = resultArr[i].set_num;
+		row.sys_id = id;
+		row.set_url = resultArr[i].set_url;
+		row.theme_id = resultArr[i].theme_id;
+		row.year = resultArr[i].year;
+		row.img_url = resultArr[i].set_img_url;
+		v_table.addRow(row);
+	}
+}
+
+//var result = sn_fd.FlowAPI.getRunner().action('x_356576_rebrickv3.get_lego_sets_info').inForeground().withInputs(inputs).run();
+//var result = sn_fd.FlowAPI.getRunner().action('x_356576_rebrickv3.get_legoset_info_details').inForeground().withInputs(inputs).run();
+		//}
+		//else {  //gs.addInfoMessage(outputs['results']);  gs.addInfoMessage('Outputs Check!!');
+		//	var row = {};
+		//	row.set_num = outputs['set_num'];
+		//	row.name = outputs['name'];     //gs.addInfoMessage(outputs['name'] + 'Row Bestückung');
+		//	row.theme_id = outputs['theme_id']; 
+		//	row.num_parts = outputs['num_parts']; 
+		//	row.img_url = outputs['set_img_url'];
+		//	row.set_url = outputs['set_url']; 
+		//	row.last_modified = outputs['last_modified_dt']; 
+		//	row.sys_id = outputs['set_num'];
+		//	row.year = outputs['year'];
+		//	v_table.addRow(row);
+		//}]]></script>
+        <sys_class_name>sys_script_vtable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-12 16:23:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8b7cc2af87d301509f45b8c6cebb350b</sys_id>
+        <sys_mod_count>98</sys_mod_count>
+        <sys_name>DefinitionRelatedLEGO-Set Results</sys_name>
+        <sys_package display_value="RebrickableV3 Spoke" source="x_356576_rebrickv3">8bdd0bb8875b85109f45b8c6cebb3559</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="RebrickableV3 Spoke">8bdd0bb8875b85109f45b8c6cebb3559</sys_scope>
+        <sys_update_name>sys_script_vtable_8b7cc2af87d301509f45b8c6cebb350b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-15 12:42:19</sys_updated_on>
+        <table>x_356576_rebrickv3_st_remote_lego_set_results</table>
+    </sys_script_vtable>
+</record_update>
